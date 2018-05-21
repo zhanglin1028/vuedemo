@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWord</title>
+</head>
+<body>
+
+
+<h1>v-if&v-else&v-show</h1>
+<hr>
+<div id="app">
+    <div v-if="isLogin">你好，ZBc</div>
+    <div v-else>请登录</div>
+    <div v-show="isLo">你好</div>
+</div>
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isLogin:true,
+            isPass:false,
+            isLo:true
+        }
+    })
+</script>
+
+
+</body>
+</html>

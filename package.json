@@ -1,0 +1,22 @@
+{
+  "name": "vuedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanglin1028/vuedemo.git"
+  },
+  "author": "ZBc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhanglin1028/vuedemo/issues"
+  },
+  "homepage": "https://github.com/zhanglin1028/vuedemo#readme"
+}
