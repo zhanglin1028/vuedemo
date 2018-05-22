@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>v-if</title>
+    <title>v-text&v-html</title>
 </head>
 <body>
 
 
-<h1>v-if&v-else&v-show</h1>
+<h1>v-text&v-html</h1>
 <hr>
 <div id="app">
-    <div v-if="isLogin">你好，ZBc</div>
-    <div v-else>请登录</div>
-    <div v-show="isLo">你好</div>
+    <span>{{message}}</span>
 </div>
 
 
@@ -21,9 +19,7 @@
     var app = new Vue({
         el: '#app',
         data: {
-            isLogin:true,
-            isPass:false,
-            isLo:true
+            message:"helloWorld"
         }
     })
 </script>
