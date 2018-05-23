@@ -10,7 +10,8 @@
 <h1>v-text&v-html</h1>
 <hr>
 <div id="app">
-    <span>{{message}}</span>
+    <span>{{message}}</span><spand v-text="message"></spand><br>
+    <span>{{dodo}}</span><span v-html="dodo"></span>
 </div>
 
 
@@ -19,11 +20,11 @@
     var app = new Vue({
         el: '#app',
         data: {
-            message:"helloWorld"
+            message:"helloWorld",
+            dodo:'<h2>helloweord</h2>'
         }
     })
 </script>
-
 
 </body>
 </html>

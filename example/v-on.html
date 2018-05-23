@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>v-on</title>
+</head>
+<body>
+
+
+<h1>v-on</h1>
+<hr>
+    <div id="app">
+        本场比赛得分：{{fenshu}}
+        <p>
+            <button v-on:click="fenshu">加分</button>
+
+        </p>
+    </div>
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            fenshu:0
+        }
+    })
+</script>
+
+
+</body>
+</html>
