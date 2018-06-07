@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bond实例</title>
+</head>
+<body>
+    <h1>v-bond实例</h1>
+    <hr>
+    <div id="app">
+        <img v-bind:src="imgSrc" width="200px">
+    </div>
+
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            imgSrc:'http://jspang.com/wp-content/uploads/2018/01/VUE-timeline.jpg'
+        }
+    })
+
+
+</script>
+
+</body>
+</html>
