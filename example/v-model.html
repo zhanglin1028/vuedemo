@@ -28,7 +28,7 @@
 
     <h3>多选框绑定数组</h3>
     <input type="checkbox" id="jspang" value="jspang" v-model="web_names">
-    <label for="jspang">jspang</label>
+    <label for="jspang">jspang</label> <!--for 绑定的是input的id -->
     <input type="checkbox" id="panda" value="panda" v-model="web_names">
     <label for="isTrue">panda</label>
     <input type="checkbox" id="panpan" value="panpan" v-model="web_names">
@@ -57,7 +57,7 @@
         el:'#app',
         data:{
             message:'hello world1116661',
-            inTrue:true,
+            inTrue:false,
             web_names:[],
             sex:'男'
         }
