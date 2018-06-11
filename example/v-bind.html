@@ -2,14 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>v-bond实例</title>
+    <title>v-bind实例</title>
 </head>
 <body>
-    <h1>v-bond实例</h1>
+    <h1>v-bind实例</h1>
     <hr>
     <div id="app">
-        <img v-bind:src="imgSrc" width="200px">
+        <p><img v-bind:src="imgSrc" width="200px"></p>
+        <p><a :href="webUrl" target="_blank">技术</a></p>
+        <hr>
+        <div :class="className">1. 绑定class</div>
+        <div :class="{classA:isOk}">2. 绑定class中的判断</div>
+        <div :class="{classA,classB}">3. 绑定class中的数组</div>
+        <hr>
+        <div>
+            <input type="checkbox" id="isok" v-model="isOk">
+            <label for="isok">isOk={{isOk}}</label>
+        </div>
     </div>
+    <style>
+        .classA {
+            color: red;
+        }
+
+        .classB {
+            font-size: 150%;
+        }
+    </style>
 
 
 
@@ -18,7 +37,13 @@
     var app = new Vue({
         el:'#app',
         data:{
-            imgSrc:'http://jspang.com/wp-content/uploads/2018/01/VUE-timeline.jpg'
+            imgSrc:'http://jspang.com/wp-content/uploads/2018/01/VUE-timeline.jpg',
+            webUrl:'http://www.baidu.com',
+            className:'classA',
+            classA:'classA',
+            classB:'classB',
+            isOk:true
+
         }
     })
 
