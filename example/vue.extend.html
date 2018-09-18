@@ -13,7 +13,9 @@
 
 <script src="../assets/js/vue.js"></script>
 <script>
-    var authorExtend = Vue.extend({
+
+    new authorExtend().$mount("author");    //挂载
+    var authorExtend = Vue.extend({         //声明标签需要展示的东西
         template:"<p><a :href='authorURL'>{{authorName}}</p>",
         data:function(){
             return{
@@ -23,7 +25,6 @@
         }
     });
 
-    new authorExtend().$mount("author");
 
 
 

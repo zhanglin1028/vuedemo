@@ -2,24 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HelloWord</title>
+    <title>vue.set 全局操作</title>
 </head>
 <body>
-<h1>Hello Word</h1>
+<h1>vue.set全局操作</h1>
 <hr>
 <div id="app">
-    {{message}}
+    {{count}}
+    <div>
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+    </div>
 </div>
+<button onclick="add()">add</button>
 
 
 
 <script src="../assets/js/vue.js"></script>
 <script>
+
+    function add(){
+        // Vue.set(outdata,'count',2);
+        // app.count++;
+        // outdata.count++;
+        // app.arr[1]='ddd'      //只写这一行下标，无法监听到，故使用，下一行vue.set方法
+        Vue.set(app.arr,1,'dd')
+
+    }
+
+    var outdata={
+            count:1,
+            // goods:'cars',
+            arr : ['aaa', 'bbb', 'ccc']
+        };
+
     var app = new Vue({
         el:'#app',
-        data:{
-            message:'hello world1116661'
-        }
+        data:outdata
+        
     })
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的生命周期
+    </title>
+</head>
+<body>
+<h1>vue的声明周期</h1>
+<hr>
+<div id="app">
+    {{count}}
+</div>
+<button onclick="add()">add</button>
+
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+
+    function add(){
+        vue.count++;
+    };
+    
+    var app = new Vue({
+        el:'#app',
+        data:{
+            count:1
+        }
+    })
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
