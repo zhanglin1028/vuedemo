@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.extend 扩展实例构造器</title>
+</head>
+<body>
+<h1>vue.extend 扩展实例构造器</h1>
+<hr>
+<author></author>
+
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var authorExtend = Vue.extend({
+        template:"<p><a :href='authorURL'>{{authorName}}</p>",
+        data:function(){
+            return{
+                authorName:'JSPang',
+                authorURL:'http://www.baidu.com'
+            }
+        }
+    });
+
+    new authorExtend().$mount("author");
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
