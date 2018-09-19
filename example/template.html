@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template的三种写法</title>
+</head>
+<body>
+<h1>template的三种写法</h1>
+<hr>
+<div id="app">
+    {{message}}
+</div>
+
+<!-- 方法二的部分 -->
+<!-- <template id="dd2">
+        <h2 style="color:green">我是template标签模板</h2>
+</template> -->
+
+<!-- 方法三 -->
+
+<script type="x-templata" id="dd3">
+    <h2 style="color:blue">我是script标签模板</h2>
+</script>
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message:'hello world1116661'
+        },
+        // 第一种方法
+        // template:`
+        //     <h2 style="color:red">我是选项模板</h2>
+        // `
+
+        //第二种方法
+        // template:"#dd2"
+
+        //第三种方法
+        template:"#dd3"
+    });
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

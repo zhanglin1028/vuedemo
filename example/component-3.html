@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component-3</title>
+</head>
+<body>
+<h1>compotent-3</h1>
+<hr>
+<div id="app">
+    <panda></panda>
+</div>
+
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var cittty = {
+        template:`
+            <div style="color:green">sichuan</div>
+        `
+    };
+    var pandaa = {
+        template:`
+        <div>
+            <div style="color:green">熊猫来自中国</div>
+            <city></city>
+        </div>
+        ` ,
+        components:{
+            "city":cittty
+        }
+    }; 
+    var app = new Vue({
+        el:'#app',
+        components:{
+            "panda":pandaa
+        }     
+    })
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

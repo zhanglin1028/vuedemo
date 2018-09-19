@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component-4</title>
+</head>
+<body>
+<h1>compotent-4</h1>
+<hr>
+<div id="app">
+    <component v-bind:is="who"></component>
+    <button @click="change">变变变</button>
+</div>
+
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+    var componentA = {
+        template:`
+            <div style="color:red">I'm compotentA.</div>`
+    };
+    var componentB = {
+        template:`
+            <div style="color:green">I'm compotentB.</div>`
+    };
+    var componentC = {
+        template:`
+            <div style="color:blue">I'm compotentC.</div>`
+    };
+ 
+    //vue部分 
+    var app = new Vue({
+        el:'#app',
+        data:{
+            who:"componentC"
+        },
+        methods: {
+            change:function(){
+                if(this.who == "componentA"){
+                    this.who = "componentB";
+                }else if(this.who == "componentB"){
+                    this.who = "componentC";
+                }else{
+                    this.who = "componentA";
+                }
+            }  
+        },
+        components:{
+            "componentA":componentA,
+            "componentB":componentB,
+            "componentC":componentC
+        }     
+    })
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
