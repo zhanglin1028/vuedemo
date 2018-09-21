@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>methods</title>
+    </head>
+    <body>
+        <h1>methods</h1>
+        <hr>
+        <div id="app">
+            <div>{{count}}</div>
+            <button @click="add(5)">add</button>
+            <p><btn @click.native="add(5)"></btn></p>
+        </div>
+        <button onclick="app.add(5)">外部add</button>
+        
+        <script src="../assets/js/vue.js"></script>
+        <script>
+            var btn = {
+                template:`<button>组件add</button>`
+            };
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    count:1
+                },
+                components:{
+                    "btn":btn
+                },
+                methods:{
+                    add:function(num){
+                        if(num!=''){
+                            this.count+=num;
+                        }else{
+                            this.count++;
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>

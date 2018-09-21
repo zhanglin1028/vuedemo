@@ -9,7 +9,7 @@
 <hr>
 <div id="app">
 
-    <panda v-bind:here="message"></panda>
+    <panda :here="message"></panda>
 
 </div>
 
@@ -21,14 +21,13 @@
     var app = new Vue({
         el:'#app',
         data:{
-            message:'qqweqweqwew'
+            message:'China'
         },
         components:{
             "panda":{
                 template:`<div style="color:green">熊猫来自{{ here}}</div>`,
                 props:['here']  
             }
-
         }
     })
 

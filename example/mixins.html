@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>mixins</title>
+    </head>
+    <body>
+        <h1>mixins</h1>
+        <hr>
+        <div id="app">
+            {{num}}
+            <p><button @click="add">add</button></p>
+        </div>
+
+
+
+
+        <script src="../assets/js/vue.js"></script>
+        <script>
+            //执行顺序：
+	        //1. 全局混入监控
+	        //2. 局部混入监控
+            //3. 原生监控
+
+
+            var addConsole={
+                updated:function(){
+                    console.log("数据发生变化");
+                },
+            };
+
+            //全局混入,Vue.mixin,后面没有s
+            Vue.mixin({
+                updated:function(){
+                    console.log("我是全局混入");
+                }
+            });
+
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    num:1 
+                },
+                methods:{
+                    add:function(){
+                        this.num++;
+                    }
+                },
+                updated:function(){
+                    console.log("我是原生的updata");
+                },
+                mixins:[addConsole]
+            })
+        </script>
+
+    </body>
+</html>

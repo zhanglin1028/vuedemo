@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>computed opention</title>
+    </head>
+    <body>
+        <h1>computed opention</h1>
+        <hr>
+        <div id="app">
+            <p>{{newPrice}}</p>
+            <ul>
+                <li v-for="item in reversNews">{{item.title}}-{{item.data}}</li>
+            </ul>
+        </div>
+
+
+
+
+        <script src="../assets/js/vue.js"></script>
+        <script>
+            var newsList=[
+                {title:'"国民center"姜丹尼尔3个月后何去何从',data:'2018/8/21'},
+                {title:'神话出演《丛林的法则》表现出惊人的综艺感',data:'2018/8/30'},
+                {title:'wanna one经济公司表示，将于11月最终回归',data:'2018/9/10'},
+                {title:'wanna one结束历时三个月的世界巡演',data:'2018/9/21'}
+            ];
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    price:100,
+                    newsList:newsList
+                },
+                computed: {
+                    newPrice:function(){
+                        return this.price = "RMB " + this.price + "元"
+                    },
+                    reversNews:function(){
+                        return this.newsList.reverse();
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>
